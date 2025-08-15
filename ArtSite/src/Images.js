@@ -1,9 +1,13 @@
- const images = [
+import sanat1 from './assets/sanat1.jpg';
+import sanat1_2 from './assets/sanat1-2.jpeg';
+import salon3 from './assets/salon3.png';
+
+const images = [
     {
       id:1,
-      src: './assets/sanat1.jpg',
-      src2: './assets/sanat1-2.jpeg',
-      src3: './assets/salon3.png',
+      src: sanat1,
+      src2: sanat1_2,
+      src3: salon3,
       title: ' BU DÜNYANIN KRALLIĞI',
       description: 'Bu ilk resim açıklaması.',
       size: '1920x1080',
