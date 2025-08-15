@@ -1,9 +1,9 @@
  const images = [
     {
       id:1,
-      src: '/src/assets/sanat1.jpg',
-      src2: '/src/assets/sanat1-2.jpeg',
-      src3: '/src/assets/salon3.png',
+      src: './assets/sanat1.jpg',
+      src2: './assets/sanat1-2.jpeg',
+      src3: './assets/salon3.png',
       title: ' BU DÜNYANIN KRALLIĞI',
       description: 'Bu ilk resim açıklaması.',
       size: '1920x1080',
