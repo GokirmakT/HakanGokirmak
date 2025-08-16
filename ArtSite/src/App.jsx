@@ -17,14 +17,22 @@ function App() {
       }}
     >
       <Stack
-        sx={{
+        sx={(theme) => ({
           animation: "scrollUp 150s linear infinite",
+          [theme.breakpoints.down("sm")]: {
+            animation: "scrollUp 40s linear infinite", // küçük ekranlarda daha hızlı
+          },
+          [theme.breakpoints.up("md")]: {
+            animation: "scrollUp 80s linear infinite", // orta ekranlarda
+          },
+          [theme.breakpoints.up("lg")]: {
+            animation: "scrollUp 180s linear infinite", // büyük ekranlarda daha yavaş
+          },
           "@keyframes scrollUp": {
             "0%": { transform: "translateY(0)" },
-            "100%": { transform: "translateY(-33.33%)" } // 3 tekrar olduğu için 1/3 kaydırıyoruz
+            "100%": { transform: "translateY(-33.33%)" }
           }
-        }}
-      >
+        })}>
         <ImageList variant="masonry" cols={4} gap={12} sx={{ width: "100%" }}>
           {repeatedImages.map((item, idx) => (
             <ImageListItem key={idx}>
