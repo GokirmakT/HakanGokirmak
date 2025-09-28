@@ -3,12 +3,10 @@ import images from "./Images";
 import HeightIcon from '@mui/icons-material/Height';
 import { Stack, ImageList, ImageListItem, Typography, Button } from "@mui/material";
 
-
 export default function ImageDetailPage() {
-  const { id } = useParams();
-  const imageId = parseInt(id, 10);
+  const { id } = useParams(); 
 
-  const selectedImage = images.find((img) => img.id === imageId);
+  const selectedImage = images.find((img) => img.id === id);
 
   const imgs = [selectedImage.src, selectedImage.src2, selectedImage.src3];
 
@@ -36,7 +34,7 @@ export default function ImageDetailPage() {
           fontWeight: "bold",
           fontFamily: '"Playfair Display", serif',
           color: "black",
-           fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem" }
+          fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.8rem"}
         }}
       >
         {selectedImage.title}
@@ -65,21 +63,20 @@ export default function ImageDetailPage() {
         </Typography>
           <HeightIcon
             sx={{
-              transform: "rotate(90deg)",
               fontSize: 20,
               color: "rgba(0, 0, 0, 0.6)",
             }}
           />
           <Typography variant="body2" sx={{ color: "rgba(0, 0, 0, 0.6)" }}>
-            {selectedImage.size.split("x")[0]} px
+            {selectedImage.size.split("x")[0]} cm
           </Typography>
         </Stack>
 
         {/* Yükseklik */}
         <Stack direction="row" alignItems="center">
-          <HeightIcon sx={{ fontSize: 20, color: "rgba(0, 0, 0, 0.6)" }} />
+          <HeightIcon sx={{transform: "rotate(90deg)", fontSize: 20, color: "rgba(0, 0, 0, 0.6)" }} />
           <Typography variant="body2" sx={{ color: "rgba(0, 0, 0, 0.6)" }}>
-            {selectedImage.size.split("x")[1]} px
+            {selectedImage.size.split("x")[1]} cm
           </Typography>
         </Stack>
       </Stack>
@@ -94,31 +91,14 @@ export default function ImageDetailPage() {
         </Typography>
       </Stack>
 
-      <Stack width={{xs:'90%', md:'55%'}} height={{xs:'60%', sm:'65%', md: '90%'}} direction={"row"} spacing={3} >
+      <Stack width={{xs:'90%', md:'55%'}} height={{xs:'70%', sm:'70%', md: '90%'}} direction={"row"} spacing={3} alignItems={'center'} justifyContent={'center'}>
 
-        <Stack width={'60%'} height={'100%'}>
-                <img
-                  src={imgs[2]}
-                  style={{ width: "100%", height: "100%", objectFit: 'fill' }}
-                />
-        </Stack>
-
-        <Stack width={'40%'} height={'100%'} spacing={'auto'} direction={'column'}>
-          <Stack width={'100%'} height={'49%'}>
+        <Stack width={{xs:'100%', sm:'70%', md: '65%'}} height={'100%'}>
                 <img
                   src={imgs[0]}
                   style={{ width: "100%", height: "100%", objectFit: 'fill' }}
                 />
-        </Stack>
-        <Stack width={'100%'} height={'49%'}>
-                <img
-                  src={imgs[1]}
-                  style={{ width: "100%", height: "100%", objectFit: 'fill' }}
-                />
-        </Stack>
-        
-      </Stack>
-      
+        </Stack>      
     </Stack>
   </Stack>
   );

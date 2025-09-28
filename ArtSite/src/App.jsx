@@ -87,7 +87,7 @@ function App() {
 
       <Button
         component={Link}
-        to="/gallery"
+        to="/Gallery"
         variant="contained"
         color="primary"
         sx={{
