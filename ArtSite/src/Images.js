@@ -1,4 +1,4 @@
-import resim1 from './assets/resim1.PNG';
+import resim1 from './assets/resim1.PNG'; 
 import resim2 from './assets/resim2.PNG';
 import resim3 from './assets/resim3.PNG';
 import resim4 from './assets/resim4.PNG';
