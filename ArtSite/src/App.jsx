@@ -33,7 +33,10 @@ function App() {
             "100%": { transform: "translateY(-33.33%)" }
           }
         })}>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13c276bdf4db38f714b0cf474a80d4a206f72883
         <ImageList variant="masonry" cols={4} gap={12} sx={{ width: "100%" }}>
           {repeatedImages.map((item, idx) => (
             <ImageListItem key={idx}>
